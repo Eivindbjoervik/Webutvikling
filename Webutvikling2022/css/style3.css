@@ -1,0 +1,357 @@
+#front-page-container{
+    display: grid;
+    grid-template-areas: "header" 
+                        "aside"
+                        "main" 
+                        "footer";
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    justify-content: start;
+    flex-direction: column;
+}
+*{
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+#tittel:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+}
+
+header{
+    grid-area: header;
+    font-family: "Trirong", serif;
+}
+
+article {
+    display: flex;
+    flex-basis: 200px;
+    flex-grow: 1;
+    border: 1px solid #030303;
+    padding: 1rem;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    align-items: stretch;
+}
+
+
+.row-header4 {
+    float: left;
+    width: 10%;
+    border: solid;
+    padding: 10px;
+    background: #ffc6a0;}
+
+
+
+.header1 {
+    padding: 60px;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Sofia", sans-serif;
+    text-shadow: 3px 3px 3px #716e6e;
+    background-image: url("../bilder/brownsky.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color:rgb(0, 0, 0);
+    background-color:black;
+    font-display: swap;
+  }
+
+header nav ul li a:hover{
+    text-decoration: underline;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
+  
+#main-menu a{
+    color:darkred;
+    padding: 1rem 0;
+    display: inline-block;
+    font-size: 1.3rem;
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+aside{
+    grid-area: aside;
+    background-color: #ffffff;
+    padding: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+aside h3{
+    font-family: "Trirong", serif;
+}
+
+footer{
+    grid-area: footer;
+}
+
+nav{
+    overflow: auto;
+    background-color: #ffdfc1;
+    padding: 0.5rem;
+    border: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article{
+    flex-basis:200px;
+    flex-grow: 1;
+    border: 1px solid #030303;
+    padding: 1rem;
+}
+
+h3 {
+    text-align: center;
+}
+
+footer{
+    background-color: rgb(80, 80, 80);
+    color: #fff;
+    padding: 3rem 2rem;
+}
+
+.tabell { 
+    overflow: auto;
+    width: 100%;
+    text-align: center;
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: auto; 
+  
+}
+
+.article1 {
+    flex-basis: 200px;
+    flex-grow: 1;
+    border: 1px solid #030303;
+    padding: 1rem;
+    width: 100%;
+    height: 50%
+}
+
+.tabell::after {
+  content: "";
+  clear: both;
+}
+
+.tabell * { box-sizing: border-box; }
+ 
+.row2, .row3, .row4, .row5 {
+  float: left;
+  width: 22.5%;
+  border:solid;
+  height: 40%;
+}
+
+.row1 {
+    float: left;
+    width: 10%;
+    border:solid;
+    height: 40%;
+  }
+
+.row-header1 {
+    float: left;
+    width: 10%;
+    border:solid;
+    padding: 10px;
+    background: white;
+    height: 12%;
+  }
+
+  .row-header3 {
+    float: left;
+    width: 10%;
+    border:solid;
+    padding: 10px;
+    background: white;
+    height: 10%;
+  }
+
+  .row-header2 {
+    float: left;
+    width: 22.5%;
+    border:solid;
+    padding: 10px;
+    background: #ffffff;
+    height: 10%;
+  }
+
+
+.row-header {
+    float: left;
+    width: 22.5%;
+    border:solid;
+    padding: 10px;
+    background: #ffffff;
+    height: 12%;
+  }
+
+  .row1, .row2, .row3, .row4, .row5 {
+    padding: 10px;
+    height: 50%;
+}
+
+.row1, .row2, .row3, .row4, .row5 { padding: 10px; }
+.row1 { background: #be8a71; }
+.row2 { background: #f9b898; }
+.row3 { background: #ffb793; }
+.row4 { background: #ffb793; }
+.row5 { background: #ffb793; }
+
+
+
+@media only screen and (min-width: 900px){
+    #front-page-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header header header" 
+                            "aside aside aside"
+                            "main main main" 
+                            "footer footer footer";
+        grid-gap: 0.8rem;
+        grid-row-gap: 0.8rem;
+        flex-direction: column;
+    
+    }
+    
+    header nav{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+     a{ color: inherit;
+        text-decoration: none; } 
+
+    #main-menu{
+        position: static;
+        width: fit-content;
+    }
+
+    #main-menu li{
+        display: inline-block;
+        margin: 0 1rem;
+    }
+    .dropmeny{
+        overflow: inherit;
+        visibility: collapse;
+    }
+}
+
+
+
+@media only screen and (max-width: 900px){  
+    .dropmeny{
+        background-color: rgb(118 43 24);
+        color: white;
+        width: 100px;
+        padding: 19px;    
+        border: groove;
+        font-size: 18px;
+        }
+
+        .dropdown {
+         position: relative;
+        display: inline-block;
+        width: 150px;
+        }
+
+        .dropdown-meny {
+            display: none;
+            background-color: #ffdfc1;
+            width: 100%;
+            }
+
+        .dropdown-meny a {
+        display: block;
+        color: rgb(83, 44, 0);
+        padding: 12px;
+        text-decoration: none;
+        }         
+
+        .dropdown:hover .dropbtn {
+        background-color: rgb(91, 42, 0);  
+        }
+
+        }
+        .dropdown:hover .dropdown-meny {
+        display: block;
+        }  
+        
+        .dropdown-meny a:hover {    
+            background-color: #ffdfc1;
+        }          
+        img {
+        border-style: none;
+        width: 64px;
+        height: 64px;
+    }  
+
+
+.fa {
+        padding: 20px;
+        font-size: 70px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+      }
+
+.fa:hover {
+        opacity: 0.7;
+      }
+      .fa-twitter {
+        background: #0b5f9f;
+        color: white;
+
+      }
+
+.fa-facebook {
+        background: #083087;
+        color: white;
+      }
+
+.fa-pinterest {
+        background: #cd2f37;
+        color: white;
+      }
+
+.fa-instagram {
+        background: #a55e5e;
+        color: white;
+      }
+.fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display,inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    font-size: initial;
+}
+      
